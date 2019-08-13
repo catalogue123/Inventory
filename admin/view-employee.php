@@ -4,7 +4,7 @@ error_reporting(0);
 include('includes/config.php');
 if(strlen($_SESSION['alogin'])==0)
     {   
-header('location:index.php');
+header('location:'.BASE_URL.'/index.php');
 $_SESSION['ses_msg']="Oops!!! Your Session Has Expired!!!";
 }
 else{ 
@@ -19,7 +19,7 @@ $query = $dbh->prepare($sql);
 $query -> bindParam(':id',$id, PDO::PARAM_INT);
 $query -> bindParam(':status',$status, PDO::PARAM_INT);
 $query -> execute();
-header('location:view-employee.php');
+header('location:'.BASE_URL.'/view-employee.php');
 }
 
 

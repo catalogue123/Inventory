@@ -16,7 +16,7 @@ $query = $dbh->prepare($sql);
 $query -> bindParam(':id',$id, PDO::PARAM_INT);
 $query -> execute();
 $_SESSION['resmsg']="Isuue Resolved Successfully";
-header('location:issue.php');
+header('location:'.BASE_URL.'/issue.php');
 
 }
 

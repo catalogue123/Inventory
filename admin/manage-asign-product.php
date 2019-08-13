@@ -4,7 +4,7 @@ error_reporting(0);
 include('includes/config.php');
 if(strlen($_SESSION['alogin'])==0)
     {   
-header('location:index.php');
+header('location:'.BASE_URL.'/index.php');
 $_SESSION['ses_msg']="Oops!!! Your Session Has Expired!!!";
 }
 else{ 
